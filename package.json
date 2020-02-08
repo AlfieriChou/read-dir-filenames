@@ -1,6 +1,6 @@
 {
   "name": "read-dir-filenames",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Read dir filenames.",
   "main": "index.js",
   "repository": "https://github.com/AlfieriChou/read-dir-filenames",

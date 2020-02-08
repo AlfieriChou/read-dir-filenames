@@ -5,7 +5,7 @@ describe('test read dir filenames', () => {
   it('test file', async done => {
     const filePath = path.resolve(__dirname, '../dir/test.js')
     const ret = await readDirFileNames(filePath)
-    expect(ret).toEqual(filePath)
+    expect(ret).toEqual([filePath])
     done()
   })
 

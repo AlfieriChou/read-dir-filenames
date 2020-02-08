@@ -13,12 +13,26 @@ npm install read-dir-filenames --save
 ## get started
 
 ```javascript
-const readDirFilenames = require('read-dir-filenames')
+const readDirFileNames = require('read-dir-filenames')
 const path = require('path')
 
 const bootstrap = () => {
   const filePath = path.resolve(__dirname, '../dir/testDir')
   const ret = await readDirFileNames(filePath)
+}
+
+bootstrap()
+```
+
+- ignore
+
+```javascript
+const readDirFileNames = require('read-dir-filenames')
+const path = require('path')
+
+const bootstrap = () => {
+  const filePath = path.resolve(__dirname, '../dir/testDir')
+  const ret = await readDirFileNames(filePath, { ignore: 'a.js' })
 }
 
 bootstrap()
