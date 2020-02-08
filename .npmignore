@@ -1,0 +1,6 @@
+__tests__
+.github
+dir
+node_modules
+jest.config.js
+yarn.lock

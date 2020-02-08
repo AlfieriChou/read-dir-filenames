@@ -1,0 +1,15 @@
+{
+  "name": "read-dir-filenames",
+  "version": "1.0.1",
+  "description": "Read dir filenames.",
+  "main": "index.js",
+  "repository": "https://github.com/AlfieriChou/read-dir-filenames",
+  "author": "AlfieriChou <alfierichou@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+}
