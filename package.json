@@ -7,12 +7,13 @@
   "author": "AlfieriChou <alfierichou@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "node -p \"require('./bin/shell.js').create()\" && jest && node -p \"require('./bin/shell.js').clear()\""
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
   "devDependencies": {
-    "jest": "^25.1.0"
+    "jest": "^25.1.0",
+    "shelljs": "^0.8.3"
   }
 }
