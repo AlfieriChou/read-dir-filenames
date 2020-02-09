@@ -9,6 +9,9 @@
   "scripts": {
     "test": "jest"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "devDependencies": {
     "jest": "^25.1.0"
   }
