@@ -1,6 +1,6 @@
 {
   "name": "read-dir-filenames",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "Read dir filenames.",
   "main": "index.js",
   "repository": "https://github.com/AlfieriChou/read-dir-filenames",
@@ -8,9 +8,6 @@
   "license": "MIT",
   "scripts": {
     "test": "node -p \"require('./bin/shell.js').create()\" && jest && node -p \"require('./bin/shell.js').clear()\""
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   },
   "devDependencies": {
     "jest": "^25.1.0",

@@ -1,24 +1,22 @@
 const fs = require('fs')
 
-const readDirFileName = async (dirPath, options) => {
-  const stat = await fs.statSync(dirPath)
+const readDirFileName = (dirPath, options) => {
+  const stat = fs.statSync(dirPath)
   if (!stat.isDirectory()) {
     return dirPath
   }
-  const dirs = await fs.readdirSync(dirPath)
+  const dirs = fs.readdirSync(dirPath)
     .filter(item => {
       if (options.ignore) {
         return !item.startsWith('.') && item !== options.ignore
       }
       return !item.startsWith('.')
     })
-  const ret = await Promise.all(dirs
-    .map(async sub => await readDirFileName(`${dirPath}/${sub}`)))
-  return [].concat(...ret)
+  return [].concat(...dirs.map( sub => readDirFileName(`${dirPath}/${sub}`)))
 }
 
-module.exports = async (dirPath, options = {}) => {
-  const ret = await readDirFileName(dirPath, options)
+module.exports = (dirPath, options = {}) => {
+  const ret = readDirFileName(dirPath, options)
   if (Array.isArray(ret)) {
     return ret
   }

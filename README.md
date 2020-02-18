@@ -18,7 +18,7 @@ const path = require('path')
 
 const bootstrap = () => {
   const filePath = path.resolve(__dirname, '../dir/testDir')
-  const ret = await readDirFileNames(filePath)
+  const ret = readDirFileNames(filePath)
 }
 
 bootstrap()
@@ -32,7 +32,7 @@ const path = require('path')
 
 const bootstrap = () => {
   const filePath = path.resolve(__dirname, '../dir/testDir')
-  const ret = await readDirFileNames(filePath, { ignore: 'a.js' })
+  const ret = readDirFileNames(filePath, { ignore: 'a.js' })
 }
 
 bootstrap()
