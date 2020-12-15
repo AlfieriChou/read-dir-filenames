@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-const readDirFileName = (dirPath, options) => {
+const readDirFileName = (dirPath, options = {}) => {
   const stat = fs.statSync(dirPath)
   if (!stat.isDirectory()) {
     return dirPath
@@ -15,8 +15,8 @@ const readDirFileName = (dirPath, options) => {
   return [].concat(...dirs.map( sub => readDirFileName(`${dirPath}/${sub}`)))
 }
 
-module.exports = (dirPath, options = {}) => {
-  const ret = readDirFileName(dirPath, options)
+module.exports = (dirPath, options) => {
+  const ret = readDirFileName(dirPath, options || {})
   if (Array.isArray(ret)) {
     return ret
   }
